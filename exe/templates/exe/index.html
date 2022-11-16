@@ -1,0 +1,19 @@
+{% extends 'exe/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+
+<ul>
+	{% for p in posts %}
+
+	<li>
+		<h2>{{p.title}}</h2>
+		<p>{{p.content}}</p>
+		<br>
+        <p class="link-read-post"><a href="{{ p.get_absolute_url }}">More info</a></p>
+	</li>
+
+	{% endfor %}
+</ul>
+
+{% endblock %}
